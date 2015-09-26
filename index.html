@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>App</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+ 
+	<!-- ANGULAR
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-sanitize.js"></script>
+	<script src="boldificator.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+<body ng-controller="defaultController as defaultCtrl">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<p ng-bind-html="defaultCtrl.p | boldificator:defaultCtrl.bold"></p>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
