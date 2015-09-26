@@ -2,7 +2,7 @@
 An angular filter that bold a list of words in a sentence.
 
 ```javascript
-var m = angular.module('yourModule'  ['boldificator']);
+var m = angular.module('yourModule'  ['boldificator', 'ngSanitize']);
 
 m.controller('parrot', function($scope) {
   $scope.text = "Bacon ipsum dolor amet short loin et eu porchetta ut ipsum, cupim lorem cow qui kielbasa.";
@@ -12,12 +12,14 @@ m.controller('parrot', function($scope) {
 
 ```html
 <div ng-controller='parrot'>
-  <p>{{text|boldificator:bold}}</p>
+  <p ng-bind-html="text | boldificator:bold"></p>
 </div>
 ```
 
 Result :
 **Bacon** ipsum dolor amet short loin et eu **porchetta** ut ipsum, cupim lorem **cow** qui kielbasa.
+
+Be careful, you may need "ngSanitize" for the rendering.
 
 ---
 
