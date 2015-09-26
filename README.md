@@ -5,7 +5,7 @@ An angular filter that bold a list of words in a sentence.
 var m = angular.module('yourModule'  ['boldificator']);
 
 m.controller('parrot', function($scope) {
-  $scope.text = "Bacon ipsum dolor amet short loin et eu porchetta ut ipsum, cupim lorem cow qui kielbasa";
+  $scope.text = "Bacon ipsum dolor amet short loin et eu porchetta ut ipsum, cupim lorem cow qui kielbasa.";
   $scope.bold = ["Bacon", "porchetta", "cow"];
 });
 ```
@@ -16,8 +16,13 @@ m.controller('parrot', function($scope) {
 </div>
 ```
 
+Result :
+**Bacon** ipsum dolor amet short loin et eu **porchetta** ut ipsum, cupim lorem **cow** qui kielbasa.
+
+---
+
 Thanks to the [Bacon Ipsum API](https://baconipsum.com/json-api/) for the nice example ;)
 
-## Who am I?
+---
 
 [Nicolas Bonduel](http://nicolas.bonduel.net)
